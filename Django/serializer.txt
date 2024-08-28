@@ -1,0 +1,41 @@
+Django's request.data (provided by Django REST Framework's APIView) will parse the incoming JSON data and convert it into a Python dictionary.
+
+# Parse JSON data
+data = json.loads(body)  # Convert JSON string to Python dictionary
+
+
+
+In Django, each model has a default manager that provides access to database operations. By default, this manager is named objects and is an instance of django.db.models.Manager.
+
+The create method is a convenience method provided by the Manager class. It creates a new instance of the model and saves it to the database in one step.
+
+
+
+
+The hashed password is then stored in the password field of the User model.
+When a user logs in, Django uses the same hashing algorithm(PBDKF2) to hash the password entered by the user and compares it to the stored hashed password to verify the user's credentials.
+
+
+
+# Use request.user to get the current authenticated user
+        user = request.user
+        
+        # Use request.data to get the data sent by the client
+        new_name = request.data.get('name')
+        new_email = request.data.get('email')
+        
+        # Update the user's profile with the new data
+        if new_name:
+            user.name = new_name
+        if new_email:
+            user.email = new_email
+        
+        user.save()
+
+
+Key Points:
+Inserting a new record: If the user instance is not yet in the database, save() will insert a new record.
+Updating an existing record: If the user instance is already in the database, save() will update the existing record.
+Model signals: Django signals like pre_save and post_save are triggered during the save() operation.
+Database transaction: The save() method is atomic, ensuring data integrity during the save operation.
+In summary, user.save() is how you persist changes made to a User instance (or any model instance) to the database in Django.

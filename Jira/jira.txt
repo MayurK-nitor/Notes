@@ -1,0 +1,36 @@
+Reference: https://youtube.com/playlist?list=PL8p2I9GklV44XfvmcdiB8vDq8HgGJmy5U&si=kOpzJB7ZtN1cUaU4
+
+
+Jira--> project management tool(project and issue tracking)-->developed by atlassian(others product are git,confluence)
+
+Jira Products:
+1. Jira Work management
+2. Jira Service management
+3. Jira Software
+
+
+###topics to conver
+
+
+How to make in Jira
+1. project
+2. Epic
+3.task
+4. subtask
+
+
+Jira instance
+-cloud instance
+    --> setup jira software on atlassian.com(Jira Cloud only)
+    --> No server cost, security code, no need to update time to time
+    --> Best for learning
+-server instance 
+    --> setup jira software on hosting server
+    --> ex. jira.mywebsite.com
+    --> need to manage time to time
+    --> used by big projects and big team
+
+Rules in Scrum
+
+Scrum practices: 1. sprint planning(product backlog)
+                2. daily Scrum(sprint backlog)  3.sprint demo/review 4.retrospective
